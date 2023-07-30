@@ -1,0 +1,3 @@
+Variance sum: 10052798.832364589
+Running time: 0.05650639533996582s
+Number of communities: 3316

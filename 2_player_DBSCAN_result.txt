@@ -1,0 +1,3 @@
+Detection time: 35.35602903366089 seconds
+Number of communities: 385
+Average Elo variance per community: 4407.865803903434

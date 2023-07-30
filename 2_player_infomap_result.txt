@@ -1,0 +1,3 @@
+Variance sum: 10147111.390715422
+Community detection time: 0.22781682014465332
+Total number of communities: 2849

@@ -1,0 +1,3 @@
+Detection time: 72.63808465003967 seconds
+Number of communities: 6
+The Mean of Elo variancey: 136940.83575837736
