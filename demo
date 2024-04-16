@@ -1,1 +1,7 @@
-https://openx.huawei.com/project/2732/KX_master/dist/#/language/python
+Routing table:
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         10.20.48.254    0.0.0.0         UG    0      0        0 eth0
+10.20.48.0      *               255.255.255.0   U     0      0        0 eth0
+127.0.0.1       *               255.255.255.255 UH    0      0        0 lo
+192.168.1.0     *               255.255.255.0   U     0      0        0 end0v0
+192.168.2.0     *               255.255.255.0   U     0      0        0 end0v0
