@@ -1,24 +1,9 @@
-arp table:
- (10.20.48.29) at e4:77:27:08:f8:f0 [ether]  on eth0
- (192.168.2.197) at 10:1b:54:ab:74:02 [ether]  on end0v0
- (192.168.2.196) at 10:1b:54:ab:74:03 [ether]  on end0v0
- (10.20.48.28) at e4:77:27:08:f8:e7 [ether]  on eth0
- (192.168.2.198) at 10:1b:54:ab:74:01 [ether]  on end0v0
- (10.20.48.19) at e4:77:27:08:fa:0f [ether]  on eth0
- (10.20.48.18) at e4:77:27:08:f9:ec [ether]  on eth0
- (10.20.48.17) at e4:77:27:08:f9:e0 [ether]  on eth0
- (10.20.48.23) at e4:77:27:08:f9:b9 [ether]  on eth0
- (10.20.48.22) at e4:77:27:08:f9:ad [ether]  on eth0
- (10.20.48.21) at e4:77:27:08:f9:ba [ether]  on eth0
- (10.20.48.20) at e4:77:27:08:f9:b4 [ether]  on eth0
- (10.20.48.27) at e4:77:27:08:f9:cd [ether]  on eth0
- (10.20.48.26) at e4:77:27:08:f8:f7 [ether]  on eth0
- (10.20.48.32) at e4:77:27:08:f9:78 [ether]  on eth0
- (192.168.2.193) at 10:1b:54:ab:74:06 [ether]  on end0v0
- (10.20.48.254) at 48:b2:5d:a8:cc:ea [ether]  on eth0
- (10.20.48.24) at e4:77:27:08:f9:ab [ether]  on eth0
- (192.168.2.192) at 10:1b:54:ab:74:07 [ether]  on end0v0
- (192.168.2.195) at 10:1b:54:ab:74:04 [ether]  on end0v0
- (10.20.48.31) at e4:77:27:08:f9:07 [ether]  on eth0
- (192.168.2.194) at 10:1b:54:ab:74:05 [ether]  on end0v0
- (10.20.48.30) at e4:77:27:08:f9:7e [ether]  on eth0
+pci:
+70:01.0 Class 0880: 19e5:a22b
+10:02.0 Class 0880: 19e5:a12c
+71:00.0 Class 0200: 19e5:a228
+70:00.0 Class 0604: 19e5:a121
+10:01.0 Class 0880: 19e5:a12e
+10:04.0 Class 0880: 19e5:a124
+10:00.0 Class 0880: 19e5:a12d
+10:03.0 Class 0880: 19e5:a122
