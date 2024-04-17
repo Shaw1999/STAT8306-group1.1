@@ -1,9 +1,16 @@
-pci:
-70:01.0 Class 0880: 19e5:a22b
-10:02.0 Class 0880: 19e5:a12c
-71:00.0 Class 0200: 19e5:a228
-70:00.0 Class 0604: 19e5:a121
-10:01.0 Class 0880: 19e5:a12e
-10:04.0 Class 0880: 19e5:a124
-10:00.0 Class 0880: 19e5:a12d
-10:03.0 Class 0880: 19e5:a122
+我现在有个txt文件（"/data1/lushengtai/own_20240328_EE9999/grep -rn "event wait"-sorted.txt"），内容部分如下：
+rank_0/debug/plog/plog-60896_20240328191649934.log:1603:[ERROR] RUNTIME(60896,python):2024-03-30-06:53:06.247.897 [device_error_proc.cc:1386]35700 ProcessStarsWaitTimeoutErrorInfo:[FINAL][FINAL]The error from device(chipId:0, dieId:0), serial number is 2, event wait timeout occurred during task execution, stream_id:16, sq_id:16, task_id:61231, event_id=42, timeout=36030.
+rank_0/debug/plog/plog-60896_20240328191649934.log:1605:[ERROR] RUNTIME(60896,python):2024-03-30-06:53:06.247.933 [task_info.cc:3711]35700 DoCompleteSuccessForEventWaitTask:[FINAL][FINAL]event wait error, retCode=0x105, [task timeout].
+rank_1/debug/plog/plog-60897_20240328191649962.log:1274:[ERROR] RUNTIME(60897,python):2024-03-30-06:53:06.363.208 [device_error_proc.cc:1386]35733 ProcessStarsWaitTimeoutErrorInfo:[FINAL][FINAL]The error from device(chipId:1, dieId:0), serial number is 2, event wait timeout occurred during task execution, stream_id:2, sq_id:2, task_id:49788, event_id=17, timeout=36030.
+rank_1/debug/plog/plog-60897_20240328191649962.log:1276:[ERROR] RUNTIME(60897,python):2024-03-30-06:53:06.363.242 [task_info.cc:3711]35733 DoCompleteSuccessForEventWaitTask:[FINAL][FINAL]event wait error, retCode=0x105, [task timeout].
+rank_2/debug/plog/plog-60898_20240328191650142.log:1262:[ERROR] RUNTIME(60898,python):2024-03-30-06:53:06.425.862 [device_error_proc.cc:1386]35693 ProcessStarsWaitTimeoutErrorInfo:[FINAL][FINAL]The error from device(chipId:2, dieId:0), serial number is 2, event wait timeout occurred during task execution, stream_id:2, sq_id:2, task_id:49785, event_id=27, timeout=36030.
+rank_2/debug/plog/plog-60898_20240328191650142.log:1264:[ERROR] RUNTIME(60898,python):2024-03-30-06:53:06.425.896 [task_info.cc:3711]35693 DoCompleteSuccessForEventWaitTask:[FINAL][FINAL]event wait error, retCode=0x105, [task timeout].
+rank_3/debug/plog/plog-60899_20240328191650082.log:1295:[ERROR] RUNTIME(60899,python):2024-03-30-06:53:06.435.643 [device_error_proc.cc:1386]35718 ProcessStarsWaitTimeoutErrorInfo:[FINAL][FINAL]The error from device(chipId:3, dieId:0), serial number is 2, event wait timeout occurred during task execution, stream_id:2, sq_id:2, task_id:49928, event_id=16, timeout=36030.
+rank_3/debug/plog/plog-60899_20240328191650082.log:1297:[ERROR] RUNTIME(60899,python):2024-03-30-06:53:06.435.674 [task_info.cc:3711]35718 DoCompleteSuccessForEventWaitTask:[FINAL][FINAL]event wait error, retCode=0x105, [task timeout].
+rank_6/debug/plog/plog-60905_20240328191650150.log:1264:[ERROR] RUNTIME(60905,python):2024-03-30-06:53:06.468.697 [device_error_proc.cc:1386]35730 ProcessStarsWaitTimeoutErrorInfo:[FINAL][FINAL]The error from device(chipId:6, dieId:0), serial number is 2, event wait timeout occurred during task execution, stream_id:2, sq_id:2, task_id:49816, event_id=8, timeout=36030.
+rank_6/debug/plog/plog-60905_20240328191650150.log:1266:[ERROR] RUNTIME(60905,python):2024-03-30-06:53:06.468.724 [task_info.cc:3711]35730 DoCompleteSuccessForEventWaitTask:[FINAL][FINAL]event wait error, retCode=0x105, [task timeout].
+
+我想提取类似这一行：rank_0/debug/plog/plog-60896_20240328191649934.log:1603:[ERROR] RUNTIME(60896,python):2024-03-30-06:53:06.247.897 [device_error_proc.cc:1386]35700 ProcessStarsWaitTimeoutErrorInfo:[FINAL][FINAL]The error from device(chipId:0, dieId:0), serial number is 2, event wait timeout occurred during task execution, stream_id:16, sq_id:16, task_id:61231, event_id=42, timeout=36030.
+中的数据stream_id:16，task_id:61231，event_id=42
+并将这三个数据分别保存为StreamID(Runtime)	TaskID(Runtime)	EventID(MindSpore)
+最终的文件用csv（/data1/lushengtai/own_20240328_EE9999/kernel_graph.csv）保存
